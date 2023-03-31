@@ -1,0 +1,109 @@
+body {
+    background-color: #262626;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333333;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 48px;
+    margin: 0;
+}
+nav {
+    background-color: #404040;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: auto;
+    justify-content: center;
+}
+nav a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 10px;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+article {
+    background-color: #333333;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #222222;
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.content{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 40px;
+    padding: 50px;
+    top: 60vh;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+.article{
+    background-color: rgb(31, 30, 30);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.article:hover{
+    transform: scale(1.01);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.article > p{
+    color: #bebcbc;
+}
+img {
+    height: 200px;
+    width: 300px;
+}
+/* @media only screen and (min-width: 600px) {
+    .content {
+        grid-template-columns: auto auto;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .content {
+        grid-template-columns: auto auto auto;
+    }
+} */
+/* @media only screen and (max-width: 400px) {
+    .content {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+@media only screen and (max-width: 900px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+@media only screen and (max-width: 600px) {
+    .content {
+        grid-template-columns: repeat(2, auto); 
+    }
+} */
+

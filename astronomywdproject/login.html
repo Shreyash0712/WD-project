@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>login</title>
+</head>
+<link rel="stylesheet" href="login.css">
+<body id="Universe">
+<img id="bg" src="images/bg.jpg" alt="">
+<div class="intro">
+    <h1 class="introh">Astronomy</h1>
+    <p>Astronomy is the scientific study of celestial objects and phenomena that exist beyond the Earth's atmosphere, such as stars, galaxies, planets, asteroids, comets, and other space bodies. It is a branch of natural science that deals with the physical and chemical properties of objects in the universe, as well as their interactions and evolution.
+    <br><br>Login to our website to learn more about Astronomy
+
+    </p>
+</div>
+<br>
+<button onclick="login()" id="loginbut"><h1>LOGIN</h1></button>
+<button onclick="signin()" id="signinbut"><h1>Sign in</h1></button>
+    <div id="form">
+        <form onsubmit="validate()" id="login">
+            <p><input placeholder="Email ID" type="email" name="email" id="email"></p>
+            <p><input placeholder="Password" type="password" name="password" id="pass"></p>
+            <br>
+            <p><input type="submit" value="Login" class="submit"></p>
+        </form>    
+        <br>
+    </div>
+    <div id="form2">
+        <p><input placeholder="Enter Email ID" type="email" name="email" id="email"></p>
+            <p><input placeholder="Enter Password" type="password" name="password" id="pass"></p>
+            <p><input placeholder="Confirm Password" type="password" name="password" id="pass"></p>
+            <br>
+            <p><input type="submit" value="Sign In" class="submit"></p>   
+    </div>
+    <div class="astronaut">
+        <div class="text"><p id="demo"></p></div>
+        <img src="images/astronaut.gif" alt="">
+    </div>
+    <script>
+        function validate(){
+            var x = document.forms['login']['email'].value;
+            if (x==""){
+            alert("E-mail ID must be filled Out")
+            return false;
+            }
+            var x = document.forms['login']['password'].value;
+            if (x==""){
+            alert("Password must be filled Out")
+            return false;
+            }
+        }
+        function login(){
+            var loginbut = document.getElementById('loginbut')
+            var signinbut = document.getElementById('signinbut')
+		    var loginForm = document.getElementById('form');
+            var loginForm2 = document.getElementById('form2');
+            loginForm.style.display = 'block';
+            loginForm2.style.display = 'none';
+            loginbut.style.backgroundColor= "rgb(236, 126, 8)"
+            signinbut.style.backgroundColor = "transparent"
+		}
+        function signin(){
+            var loginForm = document.getElementById('form');
+            var loginForm2 = document.getElementById('form2');
+            loginForm.style.display = 'none';
+            loginForm2.style.display = 'block';
+            loginbut.style.backgroundColor= "transparent"
+            signinbut.style.backgroundColor= "rgb(236, 126, 8)"
+        }
+        var i = 0;
+        var txt = 'Are you ready for the adventure?';
+        var speed = 100;
+
+        function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+        
+        }
+        typeWriter()
+    </script>
+</html>
+    
+</body>
+</html>
